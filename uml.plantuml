@@ -2,29 +2,29 @@
 skinparam handwritten true
 
 interface RouteStrategy {
-    + calculateRoute(A: Location, B: Location): Route
+    + calculateRoute(locationA: String, locationB: String): Route
 }
 
 class Navigator {
     - routeStrategy : RouteStrategy
     + setRouteStrategy(strategy: RouteStrategy)
-    + buildRoute(A: Location, B: Location): Route
+    + buildRoute(locationA: String, locationB: String): Route
 }
 
 class CarRouteStrategy {
-    + calculateRoute(A: Location, B: Location): Route
+    + calculateRoute(locationA: String, locationB: String): Route
 }
 
 class PedestrianRouteStrategy {
-    + calculateRoute(A: Location, B: Location): Route
+    + calculateRoute(locationA: String, locationB: String): Route
 }
 
 class PublicTransportRouteStrategy {
-    + calculateRoute(A: Location, B: Location): Route
+    + calculateRoute(locationA: String, locationB: String): Route
 }
 
 class BicycleRouteStrategy {
-    + calculateRoute(A: Location, B: Location): Route
+    + calculateRoute(locationA: String, locationB: String): Route
 }
 
 ' Relaciones
