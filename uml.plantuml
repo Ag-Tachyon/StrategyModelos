@@ -1,0 +1,38 @@
+@startuml strategy
+skinparam handwritten true
+
+interface RouteStrategy {
+    + calculateRoute(A: Location, B: Location): Route
+}
+
+class Navigator {
+    - routeStrategy : RouteStrategy
+    + setRouteStrategy(strategy: RouteStrategy)
+    + buildRoute(A: Location, B: Location): Route
+}
+
+class CarRouteStrategy {
+    + calculateRoute(A: Location, B: Location): Route
+}
+
+class PedestrianRouteStrategy {
+    + calculateRoute(A: Location, B: Location): Route
+}
+
+class PublicTransportRouteStrategy {
+    + calculateRoute(A: Location, B: Location): Route
+}
+
+class BicycleRouteStrategy {
+    + calculateRoute(A: Location, B: Location): Route
+}
+
+' Relaciones
+Navigator o-- RouteStrategy : "usa"
+
+RouteStrategy <|.. CarRouteStrategy
+RouteStrategy <|.. PedestrianRouteStrategy
+RouteStrategy <|.. PublicTransportRouteStrategy
+RouteStrategy <|.. BicycleRouteStrategy
+
+@enduml
