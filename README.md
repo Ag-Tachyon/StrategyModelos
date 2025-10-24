@@ -6,7 +6,7 @@
 * Juan Sebastian Diaz Peña
 
 ## UML 🌉:
-![Diagrama UML](./out/uml/strategy.png)
+![Diagrama UML](./out/uml/Estrategia.png)
 
 ## 🌟 Resumen del Proyecto
 Una aplicación de navegación para viajeros ocasionales. La aplicación ayudaba a los usuarios a orientarse rápidamente en cualquier ciudad. Una de las funciones más solicitadas para la aplicación era la planificación automática de rutas. Un usuario debía poder introducir una dirección y ver la ruta más rápida a ese destino mostrado en el mapa. La primera versión de la aplicación sólo podía generar las rutas sobre carreteras. En la siguiente actualización, añadiste una opción para crear rutas a pie. Después, añadiste otra opción para permitir a las personas utilizar el transporte público en sus rutas. Sin embargo, esto era sólo el principio. Más tarde planeaste añadir la generación de rutas para ciclistas, y más tarde, otra opción para trazar rutas por todas las atracciones turísticas de una ciudad.
