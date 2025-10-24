@@ -1,38 +1,37 @@
 @startuml strategy
 skinparam handwritten true
 
-interface RouteStrategy {
-    + calculateRoute(locationA: String, locationB: String): Route
+interface RutaEstrategia {
+    + construirRuta(a: String, b: String): String
 }
 
-class Navigator {
-    - routeStrategy : RouteStrategy
-    + setRouteStrategy(strategy: RouteStrategy)
-    + buildRoute(locationA: String, locationB: String): Route
+class Navegador {
+    - rutaEstrategia : RutaEstrategia
+    + construirRuta(a: String, a: String): String
 }
 
-class CarRouteStrategy {
-    + calculateRoute(locationA: String, locationB: String): Route
+class CarroParticularStrategy {
+    + construirRuta(a: String, b: String): String
 }
 
-class PedestrianRouteStrategy {
-    + calculateRoute(locationA: String, locationB: String): Route
+class PeatonalStrategy {
+    + construirRuta(a: String, b: String): String
 }
 
-class PublicTransportRouteStrategy {
-    + calculateRoute(locationA: String, locationB: String): Route
+class TransmilenioStrategy {
+    + construirRuta(a: String, b: String): String
 }
 
-class BicycleRouteStrategy {
-    + calculateRoute(locationA: String, locationB: String): Route
+class CiclaStrategy {
+    + construirRuta(a: String, b: String): String
 }
 
 ' Relaciones
-Navigator o-- RouteStrategy : "usa"
+Navegador o-- RutaEstrategia : "usa"
 
-RouteStrategy <|.. CarRouteStrategy
-RouteStrategy <|.. PedestrianRouteStrategy
-RouteStrategy <|.. PublicTransportRouteStrategy
-RouteStrategy <|.. BicycleRouteStrategy
+RutaEstrategia <|.. CarroParticularStrategy
+RutaEstrategia <|.. TransmilenioStrategy
+RutaEstrategia <|.. CiclaStrategy
+RutaEstrategia <|.. PeatonalStrategy
 
 @enduml
